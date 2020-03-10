@@ -21,7 +21,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode development",
     "start": "webpack-dev-server --open"
   },
   "author": "Dmitry",
