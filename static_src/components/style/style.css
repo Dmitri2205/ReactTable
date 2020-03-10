@@ -1,0 +1,303 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f6f6e9;
+  font-family: 'Spartan', sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: azure;
+}
+.app {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+}
+.app .basebutton {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  margin: -10px 20px;
+  text-transform: capitalize;
+  border: 2px solid black;
+  border-radius: 5px;
+  border: 2px solid azure;
+  font-weight: bold;
+  color: azure;
+  background-color: #fd5f00;
+}
+.app .loader {
+  width: 90%;
+  height: 70%;
+  z-index: 100;
+  background-color: #fafafa;
+  margin: 0 5%;
+  border: 2px solid azure;
+  border-radius: 15px;
+  position: absolute;
+  top: 13%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.app .loader img {
+  display: block;
+  width: 40%;
+  padding: 0 30%;
+  height: auto;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.table {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 20px 0;
+  position: relative;
+}
+.table .tablepatern {
+  line-height: 18px ;
+  width: 10%;
+  padding: 20px;
+  text-align: center;
+}
+.table .tablepatern p {
+  margin: 0;
+  float: right;
+  text-align: right;
+}
+.table .filterfield {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  line-height: 50px;
+  padding: 0;
+  margin-bottom: 3px;
+  background-color: #13334c;
+  border-radius: 5px;
+}
+.table .filterfield .findandadd {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  margin: 10px 20px;
+  text-transform: capitalize;
+  border: 2px solid black;
+  border-radius: 5px;
+  border: 2px solid azure;
+  font-weight: bold;
+  color: azure;
+  background-color: #fd5f00;
+}
+.table .filterfield input {
+  display: inline-block;
+  width: 250px;
+  height: 49px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+  padding: 0 5px;
+  border: 1px solid azure;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.table .basebutton {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid azure;
+  background-color: #fd5f00;
+  color: azure;
+}
+.table table {
+  display: table;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: azure;
+}
+.table tr {
+  height: auto;
+}
+.table td {
+  width: 10%;
+  background-color: #005792;
+  text-align: center;
+  height: auto;
+  border: 1px solid azure;
+  border-radius: 5px;
+  padding: 5px;
+}
+.table .directionButton {
+  display: inline-block;
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 60px;
+  border: 2px solid azure;
+  border-radius: 50%;
+  background-color: #fd5f00;
+  color: azure;
+}
+.table .buttonLeft {
+  top: 50%;
+  left: 10px;
+}
+.table .buttonRight {
+  top: 50%;
+  right: 10px;
+}
+.selectedelement {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 30px 0 0 15%;
+  padding: 10px;
+  height: 50%;
+  border: 2px solid #fd5f00;
+  border-radius: 5px;
+}
+.selectedelement .closeselectedbutton {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fd5f00;
+  border-radius: 50%;
+  border: none;
+}
+.selectedelement .closeselectedbutton:before {
+  content: " ";
+  position: relative;
+  top: 2px;
+  left: 6px;
+  display: block;
+  width: 26px;
+  height: 4px;
+  background-color: black;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.selectedelement .closeselectedbutton:after {
+  content: " ";
+  position: relative;
+  top: -2px;
+  left: 6px;
+  display: block;
+  width: 26px;
+  height: 4px;
+  background-color: black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.AddForm {
+  display: block;
+  width: 100%;
+  height: 280px;
+  position: absolute;
+  top: 19px;
+  left: 0;
+  background-color: #f6f6e9;
+  border: 2px solid #fd5f00;
+  border-radius: 5px;
+}
+.AddForm h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+.AddForm table td {
+  width: 20%;
+}
+.AddForm .inputRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+.AddForm .inputRow input {
+  max-width: 150px;
+  height: 45px;
+  border: 2px solid #005792 ;
+  margin: 20px 15px;
+}
+.AddForm .inputRow .adddatabutton {
+  display: block;
+  width: 170px;
+  height: 50px;
+  font-size: 19px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 2px solid #005792;
+  font-weight: bold;
+  color: azure;
+  background-color: #fd5f00;
+}
+.AddForm .close {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 2px solid azure;
+  border-radius: 50%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  top: 20px;
+  right: 19px;
+  background-color: #fd5f00;
+}
+.AddForm .close:before {
+  content: " ";
+  position: relative;
+  top: 4px;
+  left: 4px;
+  display: block;
+  width: 26px;
+  height: 4px;
+  background-color: black;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.AddForm .close:after {
+  content: " ";
+  position: relative;
+  top: 0;
+  left: 4px;
+  display: block;
+  width: 26px;
+  height: 4px;
+  background-color: black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}

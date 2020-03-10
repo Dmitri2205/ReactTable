@@ -1,1 +1,1 @@
-# ReactTable
+# Table
