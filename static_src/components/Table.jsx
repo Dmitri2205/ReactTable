@@ -223,56 +223,56 @@ filtering = (item, i) => {   //Функция фильтрации создаю�
 
   {/* Запуск проверки значения и направения сортировки*/}
     if (targetValue == 'Id') {
-    		this.setState({sortedBy:'Id',direction:'down'})
-    	if (sortedBy !== 'Id') {
-    		this.setState({sortedBy:'Id',direction:'down'})
-    	}else if (sortedBy === 'Id' && direction === 'down') {
     		this.setState({sortedBy:'Id',direction:'up'})
+    	if (sortedBy !== 'Id') {
+    		this.setState({sortedBy:'Id',direction:'up'})
+    	}else if (sortedBy === 'Id' && direction === 'up') {
+    		this.setState({sortedBy:'Id',direction:'down'})
     	};
       return a.id < b.id ? 1 : -1; //Проверка значений для последующей сортировки
     
     }else if (targetValue == 'FirstName') {
-    		this.setState({sortedBy:'First Name',direction:'down'})
-    	if (sortedBy !== 'First Name') {
-    		this.setState({sortedBy:'First Name',direction:'down'})
-    	}else if (sortedBy === 'First Name' && direction === 'down') {
     		this.setState({sortedBy:'First Name',direction:'up'})
+    	if (sortedBy !== 'First Name') {
+    		this.setState({sortedBy:'First Name',direction:'up'})
+    	}else if (sortedBy === 'First Name' && direction === 'up') {
+    		this.setState({sortedBy:'First Name',direction:'down'})
     	};
       return a.firstName < b.firstName ? 1 : -1;
 
     }else if (targetValue == 'LastName') {
-    		this.setState({sortedBy:'Last Name',direction:'down'});
+    		this.setState({sortedBy:'Last Name',direction:'up'});
     	if (sortedBy !== 'Last Name') {
-    		this.setState({sortedBy:'Last Name',direction:'down'})
-    	}else if (sortedBy === 'Last Name' && direction === 'down') {
     		this.setState({sortedBy:'Last Name',direction:'up'})
+    	}else if (sortedBy === 'Last Name' && direction === 'up') {
+    		this.setState({sortedBy:'Last Name',direction:'down'})
     	};
       return a.lastName < b.lastName ? 1 : -1;
 
     }else if (targetValue == 'email') {
-    		this.setState({sortedBy:'Email',direction:'down'});
+    		this.setState({sortedBy:'Email',direction:'up'});
     	if (sortedBy !== 'Email') {
-    		this.setState({sortedBy:'Email',direction:'down'})
-    	}else if (sortedBy === 'Email' && direction === 'down') {
     		this.setState({sortedBy:'Email',direction:'up'})
+    	}else if (sortedBy === 'Email' && direction === 'up') {
+    		this.setState({sortedBy:'Email',direction:'down'})
     	};
       return a.email < b.email ? 1 : -1;
 
     }else if (targetValue == 'phone') {
-    	this.setState({sortedBy:'Phone',direction:'down'});
+    	this.setState({sortedBy:'Phone',direction:'up'});
     	if (sortedBy !== 'Phone') {
-    		this.setState({sortedBy:'Phone',direction:'down'})
-    	}else if (sortedBy === 'Phone' && direction === 'down') {
     		this.setState({sortedBy:'Phone',direction:'up'})
+    	}else if (sortedBy === 'Phone' && direction === 'up') {
+    		this.setState({sortedBy:'Phone',direction:'down'})
     	};
       return a.email < b.email ? 1 : -1;
 
     }else if (targetValue == 'Streetaddress') {
-    	this.setState({sortedBy:'Street Address',direction:'down'});
+    	this.setState({sortedBy:'Street Address',direction:'up'});
     	if (sortedBy !== 'Street Address') {
-    		this.setState({sortedBy:'Street Address',direction:'down'})
-    	}else if (sortedBy === 'Street Address' && direction === 'down') {
     		this.setState({sortedBy:'Street Address',direction:'up'})
+    	}else if (sortedBy === 'Street Address' && direction === 'up') {
+    		this.setState({sortedBy:'Street Address',direction:'down'})
     	};
 
 
@@ -290,11 +290,11 @@ filtering = (item, i) => {   //Функция фильтрации создаю�
     	}else if(b.address === undefined){
     		return false;
     	}else{
-    		this.setState({sortedBy:'City',direction:'down'});
+    		this.setState({sortedBy:'City',direction:'up'});
     		if (sortedBy !== 'City') {
-    			this.setState({sortedBy:'City',direction:'down'})
-    		}else if (sortedBy === 'City' && direction === 'down') {
     			this.setState({sortedBy:'City',direction:'up'})
+    		}else if (sortedBy === 'City' && direction === 'up') {
+    			this.setState({sortedBy:'City',direction:'down'})
     		};
       	return a.address.city > b.address.city ? 1 : -1;
     	};
@@ -305,11 +305,11 @@ filtering = (item, i) => {   //Функция фильтрации создаю�
     	}else if(b.address === undefined){
     		return false;
     	}else{
-    	this.setState({sortedBy:'State',direction:'down'});
+    	this.setState({sortedBy:'State',direction:'up'});
     		if (sortedBy !== 'State') {
-    			this.setState({sortedBy:'State',direction:'down'})
-    		}else if (sortedBy === 'State' && direction === 'down') {
     			this.setState({sortedBy:'State',direction:'up'})
+    		}else if (sortedBy === 'State' && direction === 'up') {
+    			this.setState({sortedBy:'State',direction:'down'})
     		};
       		return a.address.state < b.address.state ? 1 : -1;
     	};
@@ -320,21 +320,21 @@ filtering = (item, i) => {   //Функция фильтрации создаю�
     	}else if(b.address === undefined){
     		return false;
     	}else{
-    	this.setState({sortedBy:'zip',direction:'down'});
+    	this.setState({sortedBy:'zip',direction:'up'});
     		if (sortedBy !== 'zip') {
-    			this.setState({sortedBy:'zip',direction:'down'})
-    		}else if (sortedBy === 'zip' && direction === 'down') {
     			this.setState({sortedBy:'zip',direction:'up'})
+    		}else if (sortedBy === 'zip' && direction === 'up') {
+    			this.setState({sortedBy:'zip',direction:'down'})
     		};
       		return a.address.zip < b.address.zip ? 1 : -1;
     	};
 
     }else if (targetValue == 'description') {
-    		this.setState({sortedBy:'Id',direction:'down'})
+    		this.setState({sortedBy:'Id',direction:'up'})
     	if (sortedBy !== 'Description') {
-    		this.setState({sortedBy:'Description',direction:'down'})
-    	}else if (sortedBy === 'Description' && direction === 'down') {
     		this.setState({sortedBy:'Description',direction:'up'})
+    	}else if (sortedBy === 'Description' && direction === 'up') {
+    		this.setState({sortedBy:'Description',direction:'down'})
     	};
       return a.description < b.description ? 1 : -1;
     };
