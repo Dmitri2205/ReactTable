@@ -3,6 +3,11 @@ body {
   margin: 0;
   background-color: #f6f6e9;
   font-family: 'Spartan', sans-serif;
+  font-size: .8em;
+}
+body button:focus,
+body input:focus {
+  outline: none;
 }
 body a {
   text-decoration: none;
@@ -14,23 +19,25 @@ body a {
   height: auto;
   padding: 20px 0;
 }
+.app h1 {
+  margin-left: 1.2%;
+}
 .app .basebutton {
   display: inline-block;
   width: 150px;
-  height: 50px;
+  height: 2.4rem;
   font-size: 25px;
   margin: -10px 20px;
   text-transform: capitalize;
-  border: 2px solid black;
+  border: 2.5px solid black;
   border-radius: 5px;
-  border: 2px solid azure;
   font-weight: bold;
   color: azure;
-  background-color: #fd5f00;
+  background-color: #00C800;
 }
 .app .loader {
   width: 90%;
-  height: 70%;
+  height: 60vh;
   z-index: 100;
   background-color: #fafafa;
   margin: 0 5%;
@@ -44,7 +51,7 @@ body a {
 }
 .app .loader img {
   display: block;
-  width: 40%;
+  width: auto;
   padding: 0 30%;
   height: auto;
   position: relative;
@@ -65,13 +72,12 @@ body a {
 .table .tablepatern {
   line-height: 18px ;
   width: 10%;
-  padding: 20px;
   text-align: center;
 }
 .table .tablepatern p {
   margin: 0;
   float: right;
-  text-align: right;
+  text-align: left;
 }
 .table .filterfield {
   display: -webkit-box;
@@ -94,21 +100,36 @@ body a {
 .table .filterfield .findandadd {
   display: inline-block;
   width: 150px;
-  height: 50px;
+  height: 2.4rem;
   font-size: 25px;
   margin: 10px 20px;
   text-transform: capitalize;
-  border: 2px solid black;
-  border-radius: 5px;
   border: 2px solid azure;
+  border-radius: 5px;
   font-weight: bold;
   color: azure;
-  background-color: #fd5f00;
+  background-color: #00C800;
+}
+@-webkit-keyframes button {
+  0% {
+    background-color: cyan;
+  }
+  100% {
+    background-color: #00C800;
+  }
+}
+@keyframes button {
+  0% {
+    background-color: cyan;
+  }
+  100% {
+    background-color: #00C800;
+  }
 }
 .table .filterfield input {
   display: inline-block;
   width: 250px;
-  height: 49px;
+  height: 2.3rem;
   margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
@@ -118,34 +139,38 @@ body a {
   border-radius: 5px;
   text-transform: capitalize;
 }
-.table .basebutton {
-  display: inline-block;
-  width: 150px;
-  height: 50px;
-  margin: 10px;
-  border-radius: 5px;
-  border: 2px solid azure;
-  background-color: #fd5f00;
-  color: azure;
-}
 .table table {
   display: table;
   width: 100%;
-  font-size: 20px;
   font-weight: bold;
   color: azure;
+  background-color: #0094f8;
+}
+@-webkit-keyframes table {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes table {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .table tr {
   height: auto;
 }
 .table td {
-  width: 10%;
+  width: auto;
   background-color: #005792;
-  text-align: center;
   height: auto;
-  border: 1px solid azure;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
 }
 .table .directionButton {
   display: inline-block;
@@ -157,8 +182,17 @@ body a {
   font-size: 60px;
   border: 2px solid azure;
   border-radius: 50%;
-  background-color: #fd5f00;
+  background-color: #00C800;
   color: azure;
+}
+.table .directionButton:focus {
+  outline: none;
+}
+.table .directionButton img {
+  width: 65px;
+  height: 50px;
+  margin-top: 9px;
+  margin-left: 2px;
 }
 .table .buttonLeft {
   top: 50%;
@@ -175,7 +209,7 @@ body a {
   margin: 30px 0 0 15%;
   padding: 10px;
   height: 50%;
-  border: 2px solid #fd5f00;
+  border: 2px solid #00C800;
   border-radius: 5px;
 }
 .selectedelement .closeselectedbutton {
@@ -185,7 +219,7 @@ body a {
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: #fd5f00;
+  background-color: #00C800;
   border-radius: 50%;
   border: none;
 }
@@ -215,14 +249,37 @@ body a {
 }
 .AddForm {
   display: block;
-  width: 100%;
-  height: 280px;
+  width: 90%;
+  margin: 0 auto;
+  height: 4%;
   position: absolute;
-  top: 19px;
-  left: 0;
+  top: 1%;
+  left: 5%;
   background-color: #f6f6e9;
-  border: 2px solid #fd5f00;
+  border: 3px solid #00C800;
   border-radius: 5px;
+  -webkit-animation: addform .5s ease;
+          animation: addform .5s ease;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+@-webkit-keyframes addform {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes addform {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .AddForm h1 {
   text-align: center;
@@ -230,6 +287,10 @@ body a {
 }
 .AddForm table td {
   width: 20%;
+  text-transform: capitalize;
+}
+.AddForm table {
+  height: 18%;
 }
 .AddForm .inputRow {
   display: -webkit-box;
@@ -243,25 +304,29 @@ body a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
 }
 .AddForm .inputRow input {
   max-width: 150px;
-  height: 45px;
+  height: 35px;
   border: 2px solid #005792 ;
+  border-radius: 4px;
+  font-size: 1.5rem;
   margin: 20px 15px;
 }
 .AddForm .inputRow .adddatabutton {
   display: block;
   width: 170px;
-  height: 50px;
-  font-size: 19px;
+  height: 2.6rem;
+  font-size: 1.3em;
   margin: 20px;
   border-radius: 5px;
   border: 2px solid #005792;
   font-weight: bold;
   color: azure;
-  background-color: #fd5f00;
+  background-color: #00C800;
 }
 .AddForm .close {
   display: inline-block;
@@ -275,15 +340,15 @@ body a {
   font-size: 30px;
   top: 20px;
   right: 19px;
-  background-color: #fd5f00;
+  background-color: #FA2323;
 }
 .AddForm .close:before {
   content: " ";
   position: relative;
-  top: 4px;
-  left: 4px;
+  top: 1px;
+  left: 2px;
   display: block;
-  width: 26px;
+  width: 30px;
   height: 4px;
   background-color: black;
   -webkit-transform: rotate(-45deg);
@@ -292,12 +357,20 @@ body a {
 .AddForm .close:after {
   content: " ";
   position: relative;
-  top: 0;
-  left: 4px;
+  top: -3px;
+  left: 2px;
   display: block;
-  width: 26px;
+  width: 30px;
   height: 4px;
   background-color: black;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+.AddForm .close:before,
+.AddForm .close:after {
+  border-radius: 5px;
+}
+.AddForm .close:focus {
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */

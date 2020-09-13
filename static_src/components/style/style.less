@@ -3,33 +3,41 @@ padding: 0;
 margin: 0;
 background-color: #f6f6e9;
 font-family: 'Spartan', sans-serif;
-a{
-text-decoration: none;
-color: azure;
-}
+font-size: .8em;
+	button,input{
+		&:focus{
+			outline: none;
+		}
+	}
+	a{
+		text-decoration: none;
+		color: azure;
+	}
 }
 .app{
 	display: block;
 	width: 100%;
 	height: auto;
 	padding: 20px 0;
+	h1{
+		margin-left: 1.2%;
+	}
 .basebutton{
 	display: inline-block;
 	width: 150px;
-	height: 50px;
+	height: 2.4rem;
 	font-size: 25px;
 	margin:-10px 20px;
 	text-transform: capitalize; 
-	border: 2px solid black;
-	border-radius:5px;
-	border:2px solid azure;
+	border: 2.5px solid black;
+	border-radius:5px;	
 	font-weight: bold;
 	color: azure;
-	background-color: #fd5f00;
+	background-color: #00C800;
 	}
 	.loader{
 		width: 90%;
-		height: 70%;
+		height: 60vh;
 		z-index: 100;
 		background-color:darken(white,2%);
 		margin:0 5%;
@@ -42,7 +50,7 @@ color: azure;
 		left: 0;
 		img{
 		display: block;
-		width: 40%;
+		width: auto;
 		padding: 0 30%;
 		height: auto;
 		position: relative;
@@ -63,12 +71,11 @@ position: relative;
 .tablepatern {
 	line-height:18px ;
 	width: 10%;
-	padding: 20px;
 	text-align: center;
 p{
 margin: 0;
 float: right;
-text-align: right;
+text-align: left;
 }
 }
 .filterfield{
@@ -84,59 +91,62 @@ border-radius: 5px;
 	.findandadd{
 	display: inline-block;
 	width: 150px;
-	height: 50px;
+	height: 2.4rem;
 	font-size: 25px;
 	margin:10px 20px;
 	text-transform: capitalize; 
-	border: 2px solid black;
+	border: 2px solid azure;
 	border-radius:5px;
-	border:2px solid azure;
 	font-weight: bold;
 	color: azure;
-	background-color: #fd5f00;
+	background-color: #00C800;
+		@keyframes button{
+		0%{
+			background-color: cyan;
+		}100%{
+			background-color: #00C800;
+			
+		}
+	}
 }
-input{
-	display:inline-block;
-	width: 250px;
-	height: 49px;
-	margin-top: 10px;
-	font-size: 24px;
-	font-weight: bold;
-	margin-left: 20px;
-	padding:0 5px;
-	border:1px solid azure;
-	border-radius:5px;
-	text-transform: capitalize;
-}
-}
-.basebutton{
-	display:inline-block;
-	width: 150px;
-	height: 50px;
-	margin: 10px;
-	border-radius:5px;
-	border:2px solid azure;
-	background-color: #fd5f00;
-	color: azure;
+	input{
+		display:inline-block;
+		width: 250px;
+		height: 2.3rem;
+		margin-top: 10px;
+		font-size: 24px;
+		font-weight: bold;
+		margin-left: 20px;
+		padding:0 5px;
+		border:1px solid azure;
+		border-radius:5px;
+		text-transform: capitalize;
+	}
 }
 table{
 	display: table;
 	width: 100%;
-	font-size: 20px;
 	font-weight: bold;
 	color: azure; 
+	background-color:lighten(#005792,20%);
+	@keyframes table {
+	0%{
+		opacity: 0;
+	}100%{
+		opacity: 1;
+	}
+}
 }
 tr{
 	height: auto;
 }
 td{
-	width: 10%;
+	width: auto;
 	background-color:#005792;
 	text-align: center;
 	height: auto;
-	border: 1px solid azure;
-	border-radius: 5px;
-	padding: 5px;
+	border-radius: 4px;
+	text-align: center;
 }
 .directionButton{
 	display: inline-block;
@@ -148,28 +158,36 @@ td{
 	font-size: 60px;
 	border:2px solid azure;
 	border-radius: 50%;
-	background-color: #fd5f00;
+	background-color: #00C800;
 	color:azure;
+	&:focus{
+		outline: none;
+	}
+	img{
+		width: 65px;
+		height: 50px;
+		margin-top: 9px;
+		margin-left: 2px;
+	}
 }
-.buttonLeft{
-	top: 50%;
-	left: 10px;
-	
-}
-.buttonRight{
-	top: 50%;
-	right: 10px;
-}
+	.buttonLeft{
+		top: 50%;
+		left: 10px;
+	}
+	.buttonRight{
+		top: 50%;
+		right: 10px;
+	}
 }
 .selectedelement{
-display: block;
-position: relative;
-width: 70%;
-margin:30px 0 0 15%;
-padding: 10px;
-height: 50%;
-border:2px solid #fd5f00;
-border-radius: 5px;
+	display: block;
+	position: relative;
+	width: 70%;
+	margin:30px 0 0 15%;
+	padding: 10px;
+	height: 50%;
+	border:2px solid #00C800;
+	border-radius: 5px;
 .closeselectedbutton{
 	display: inline-block;
 	position: absolute;
@@ -177,7 +195,7 @@ border-radius: 5px;
 	right: 20px;
 	width: 50px;
 	height: 50px;
-	background-color: #fd5f00;
+	background-color: #00C800;
 	border-radius: 50%;
 	border:none;
 	&:before{
@@ -185,65 +203,82 @@ border-radius: 5px;
 		position: relative;
 		top: 2px;
 		left:6px;
-	display: block;
-	width: 26px;
-	height: 4px;
-	background-color: black;
-	transform: rotate(-45deg);
+		display: block;
+		width: 26px;
+		height: 4px;
+		background-color: black;
+		transform: rotate(-45deg);
 	}
 	&:after{
 	content: " ";
 		position: relative;
 		top: -2px;
 		left:6px;
-	display: block;
-	width: 26px;
-	height: 4px;
-	background-color: black;
-	transform: rotate(45deg);
+		display: block;
+		width: 26px;
+		height: 4px;
+		background-color: black;
+		transform: rotate(45deg);
 	}
   }
 }
 .AddForm{
 	display: block;
-	width: 100%;
-	height: 280px;
+	width: 90%;
+	margin: 0 auto;
+	height: 4%;
 	position: absolute;
-	top: 19px;
-	left: 0;
+	top: 1%;
+	left: 5%;
 	background-color:#f6f6e9;
-	border:2px solid #fd5f00;
+	border:3px solid #00C800;
 	border-radius: 5px;
+	animation: addform .5s ease;
+	transition: transform .5s;
+	@keyframes addform {
+		0%{
+			opacity: 0;
+		}100%{
+			opacity: 1;
+		}
+	}
 	h1{
 		text-align: center;
 		margin-top:30px; 
 	}
 	table td{
 		width: 20%; 
+		text-transform: capitalize;
+	}
+	table{
+		height: 18%;
 	}
 	.inputRow{
 			display: flex;
 			width: 100%;
 			flex-direction: row;
 			justify-content: space-between;
+			flex-wrap: wrap;
 			padding: 0;
 			input{
 				max-width: 150px;
-				height: 45px;
+				height: 35px;
 				border:2px solid #005792 ;
+				border-radius: 4px;
+				font-size: 1.5rem;
 				margin: 20px 15px;
 			}
 			.adddatabutton{
 				display:block;
 				width: 170px;
-				height: 50px;
-				font-size: 19px;
+				height: 2.6rem;
+				font-size: 1.3em;
 				margin: 20px; 
 				border-radius:5px;
 				border: 2px solid #005792;
 				font-weight: bold;
 				color: azure;
-				background-color: #fd5f00;
+				background-color: #00C800;
 			}
 	}
 
@@ -259,29 +294,35 @@ border-radius: 5px;
 	font-size: 30px;
 	top: 20px;
 	right:19px;
-	background-color: #fd5f00;
-}
-	.close:before{
+	background-color: #FA2323;
+		&:before{
 		content: " ";
 		position: relative;
-		top: 4px;
-		left:4px;
-	display: block;
-	width: 26px;
-	height: 4px;
-	background-color: black;
-	transform: rotate(-45deg);
+		top: 1px;
+		left:2px;
+		display: block;
+		width: 30px;
+		height: 4px;
+		background-color: black;
+		transform: rotate(-45deg);
 
-	}
-	.close:after{
+		}
+		&:after{
 		content: " ";
 		position: relative;
-		top: 0;
-		left:4px;
-	display: block;
-	width: 26px;
-	height: 4px;
-	background-color: black;
-	transform: rotate(45deg);
+		top: -3px;
+		left:2px;
+		display: block;
+		width: 30px;
+		height: 4px;
+		background-color: black;
+		transform: rotate(45deg);
+		}
+		&:before,&:after{
+			border-radius: 5px;
+		}
+		&:focus{
+			outline: none;
+		}
 	}
 }

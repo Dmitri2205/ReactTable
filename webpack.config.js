@@ -9,7 +9,7 @@ module.exports = {
    output: {
        path: path.resolve(__dirname, "static", "build"),
        filename: 'app.js',
-       publicPath: '/static/build/',
+       publicPath: 'static/build/',
    },
    resolve:{
     modules:[`${__dirname}/static_src`, 'node_modules'],
@@ -34,12 +34,11 @@ module.exports = {
          use: ['style-loader', 'css-loader'],
        },
        {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
+           test: /\.(gif|png|jpg|jpeg|svg)?$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
       },
     ],
    },

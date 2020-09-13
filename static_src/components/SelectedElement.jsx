@@ -4,20 +4,20 @@ import ReactDOM from 'react-dom';
 
 export default class SelectedElement extends React.Component {
 	state = {
-		v:false,
+		v:false,//Visible
 	};
 
-componentDidUpdate(prevProps){
+componentDidUpdate(prevProps){//Определение предыдущих пропс для управления видимостью 
 	if (prevProps.selected !== this.props.selected) {
 		this.setState({user:this.props.user,v:true});
 		this.forceUpdate();
 	};
 };
 
-closeSelected = () => {
-if(this.state.v === true){
-	this.setState({v:false});
-};
+	closeSelected = () => {//Закрытие окна выбранного пользователя
+	if(this.state.v === true){
+		this.setState({v:false});
+	};
 };
 
 
