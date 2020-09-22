@@ -44,42 +44,6 @@ baseButton = (value) => {
 				alert(error);
 			});
 	};
-{/* Выбрана сторонняя бибилиотека AXIOS т.к. она основана 
-	на промисах,более удобна в использовании и парсинге json формата,
-	а так же позволяет писать код запросов более лаконично и понятно.
-	Ниже представлен пример таких же запросов основанных на методе FETCH
-	до рефакторинга данного кода.
- */}
-
-// if(value == this.state.minData ){
-//     fetch(value)
-//        .then( (response) => {
-//    		response.json().then( (data) => {
-//    			if(response.ok){
-//    				this.setState({responseData:data,isFetching:false});
-//    			}else{
-//    				setTimeout(()=>{
-//    		this.setState({responseData:data,isFetching:false});
-//    		}, 200);
-//    		};
-//    })
-//  })
-// }else{
-// 	fetch(value)
-//        .then( (response) => {
-//    			response.json().then( (data) => {
-//    				if(response.ok){
-//    			this.setState({responseData:data,isFetching:false})
-//    				}else{
-//    						setTimeout(()=>{
-//    					this.setState({responseData:data, isFetching:false})
-//    					}, 540);
-//    				};
-//    			})
-//   	})
-// };
-}
-
 
   render(){
   	const {isFetching,minData,maxData,responseData,input} = this.state; //Объявление значений state для большего удобства и сокращения кода
